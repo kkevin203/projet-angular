@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SellService } from '../services/sell.service';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'wfb-product',
@@ -19,6 +20,7 @@ export class ProductComponent implements OnInit {
   }
   sellProduct() {
     this.sell.state = 'selled';
+    alert(environment.test);
   }
   showProduct() {
     alert(this.sell.getState());
