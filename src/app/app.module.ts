@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { LoginComponent } from './login/login.component';
 import { ListProductComponent } from './list-product/list-product.component';
+import { SubscriptionComponent } from './subscription/subscription.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     LoginComponent,
-    ListProductComponent
+    ListProductComponent,
+    SubscriptionComponent
   ],
   imports: [
     BrowserModule,

@@ -1,14 +1,17 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class SellService {
+  constructor(private httpClient: HttpClient) {}
+  private state = "STAND_BY";
 
-  constructor() { }
-  public state = 'stand by';
-  getState(){
-    return this.state
+  getState() {
+    return this.state;
   }
-
+  setState(state: string) {
+    this.state = state;
+  }
 }

@@ -11,18 +11,23 @@ export class ProductComponent implements OnInit {
   title!: string;
   description!: string;
   price!: number;
+  productState!: string;
   constructor(private sell: SellService) {}
 
   ngOnInit(): void {
     this.title = 'Maillot';
     this.description = 'voici notre maillot';
     this.price = 45;
+    this.productState = 'EN_STOCK'
   }
   sellProduct() {
-    this.sell.state = 'selled';
-    alert(environment.test);
+    this.productState= 'SELLED';
   }
-  showProduct() {
-    alert(this.sell.getState());
+  showState() {
+    const state = this.productState;
+    alert(state);
+  }
+  release() {
+    this.sell.setState('FREE');
   }
 }
