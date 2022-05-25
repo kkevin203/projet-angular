@@ -5,7 +5,7 @@ import {HttpClient} from "@angular/common/http";
   providedIn: "root",
 })
 export class SellService {
-  constructor(private httpClient: HttpClient) {}
+  constructor() {}
   private state = "STAND_BY";
 
   getState() {

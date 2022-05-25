@@ -1,10 +1,7 @@
-<wfb-product></wfb-product>
-<wfb-product></wfb-product>
-<wfb-product></wfb-product>
-<wfb-product></wfb-product>
-<wfb-product></wfb-product>
-<wfb-product></wfb-product>
-<wfb-product></wfb-product>
-<wfb-product></wfb-product>
-**************************
-<wfb-subscription></wfb-subscription>
+<div *ngFor="let product of products">
+    <wfb-product
+    [title]="product.title"
+    [price]="product.price"
+    [description]="product.description"
+    ></wfb-product>
+</div>

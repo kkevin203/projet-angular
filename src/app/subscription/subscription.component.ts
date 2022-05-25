@@ -7,6 +7,7 @@ import { SellService } from '../services/sell.service';
   styleUrls: ['./subscription.component.css'],
 })
 export class SubscriptionComponent implements OnInit {
+  
   constructor(private sell: SellService) {}
 
   ngOnInit(): void {}

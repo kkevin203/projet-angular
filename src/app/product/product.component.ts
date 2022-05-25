@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SellService } from '../services/sell.service';
 import { environment } from '../../environments/environment';
 
@@ -8,10 +8,11 @@ import { environment } from '../../environments/environment';
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent implements OnInit {
-  title!: string;
-  description!: string;
-  price!: number;
-  productState!: string;
+  @Input() title!: string;
+  @Input() description!: string;
+  @Input() price!: number;
+  @Input() productState!: string;
+
   constructor(private sell: SellService) {}
 
   ngOnInit(): void {
