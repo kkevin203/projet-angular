@@ -1,3 +1,7 @@
+<div>
+    <button (click)='getProducts()'> Get Product</button>
+</div>
+
 <div *ngFor="let product of products">
     <wfb-product
     [title]="product.title"

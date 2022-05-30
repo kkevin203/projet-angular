@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDatepickerModule  } from '@angular/material/datepicker';
 import { MatFormFieldModule  } from '@angular/material/form-field';
+import {HttpClientModule} from '@angular/common/http'
 
 
 
@@ -35,6 +36,7 @@ import { MatFormFieldModule  } from '@angular/material/form-field';
     MatGridListModule,
     MatDatepickerModule,
     MatFormFieldModule,
+    HttpClientModule,
   ],
   providers: [],
   exports: [ProductComponent],
