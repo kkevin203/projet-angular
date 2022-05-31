@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { HttpServiceService } from '../services/http-service.service';
+import { HttpServiceService } from '../services/http-Service.service';
 
 @Component({
   selector: 'wfb-list-product',
@@ -31,6 +31,9 @@ export class ListProductComponent implements OnInit {
   ngOnInit(): void {}
 
   getProducts() {
-    this.httpServiceService.getProducts().subscribe((data) => console.log(data))
+    this.httpServiceService.getProducts().subscribe(data=> console.log(data))
+  }
+  getProductsWithPromise() {
+    this.httpServiceService.getProductsWithPromise().then((data)=> console.log(data))
   }
 }

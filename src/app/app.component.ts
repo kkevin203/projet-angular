@@ -20,22 +20,4 @@ export class AppComponent {
     { text: 'Three', cols: 1, rows: 1, color: 'lightpink' },
     { text: 'Four', cols: 1, rows: 1, color: '#DDBDF1' },
   ];
-  campaignOne: FormGroup;
-  campaignTwo: FormGroup;
-
-  constructor() {
-    const today = new Date();
-    const month = today.getMonth();
-    const year = today.getFullYear();
-
-    this.campaignOne = new FormGroup({
-      start: new FormControl(new Date(year, month, 13)),
-      end: new FormControl(new Date(year, month, 16)),
-    });
-
-    this.campaignTwo = new FormGroup({
-      start: new FormControl(new Date(year, month, 15)),
-      end: new FormControl(new Date(year, month, 19)),
-    });
-  }
 }

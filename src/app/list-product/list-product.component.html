@@ -1,6 +1,9 @@
 <div>
     <button (click)='getProducts()'> Get Product</button>
 </div>
+<div>
+    <button (click)='getProductsWithPromise()'> Get Product with promis</button>
+</div>
 
 <div *ngFor="let product of products">
     <wfb-product
