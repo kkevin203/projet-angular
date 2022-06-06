@@ -1,0 +1,8 @@
+#contact {
+  text-align: center;
+  font-size: 1.2em;
+  border: 2px black double;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 40px;
+}

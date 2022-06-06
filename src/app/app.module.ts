@@ -15,8 +15,14 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDatepickerModule  } from '@angular/material/datepicker';
 import { MatFormFieldModule  } from '@angular/material/form-field';
 import {HttpClientModule} from '@angular/common/http'
-import {} from 'axios'
-
+import {} from 'axios';
+import { HeaderComponent } from './header/header.component';
+import { NavComponent } from './nav/nav.component'
+import {MatMenuModule} from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card';
+import { CardComponent } from './card/card.component';
+import { FooterComponent } from './footer/footer.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -26,6 +32,11 @@ import {} from 'axios'
     LoginComponent,
     ListProductComponent,
     SubscriptionComponent,
+    HeaderComponent,
+    NavComponent,
+    CardComponent,
+    FooterComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +49,8 @@ import {} from 'axios'
     MatDatepickerModule,
     MatFormFieldModule,
     HttpClientModule,
+    MatMenuModule,
+    MatCardModule,
   ],
   providers: [],
   exports: [ProductComponent],
