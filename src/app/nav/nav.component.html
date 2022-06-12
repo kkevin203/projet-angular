@@ -1,4 +1,4 @@
-<button mat-button [matMenuTriggerFor]="aboveMenu">Acceuil</button>
+<button mat-button [matMenuTriggerFor]="aboveMenu" routerLink="">Acceuil</button>
 <mat-menu #aboveMenu="matMenu" yPosition="above">
   <button mat-menu-item>pôle Esport</button>
   <button mat-menu-item>pôle Evenementiel</button>
@@ -6,10 +6,10 @@
 
 <button mat-button [matMenuTriggerFor]="belowMenu">Qui sommes nous ?</button>
 <mat-menu #belowMenu="matMenu" yPosition="below">
-  <button mat-menu-item>Présentation</button>
-  <button mat-menu-item>Nos missions</button>
+  <button mat-menu-item routerLink="/presentation">Présentation</button>
+  <button mat-menu-item  routerLink="/mission">Nos missions</button>
 </mat-menu>
-
+<router-outlet></router-outlet>
 <button mat-button [matMenuTriggerFor]="beforeMenu">News</button>
 <mat-menu #beforeMenu="matMenu" xPosition="before">
   <button mat-menu-item>Event</button>
@@ -23,3 +23,4 @@
   <button mat-menu-item>Twitter</button>
   <button mat-menu-item>Twitch</button>
 </mat-menu>
+<router-outlet></router-outlet>

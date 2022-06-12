@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
@@ -15,7 +14,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDatepickerModule  } from '@angular/material/datepicker';
 import { MatFormFieldModule  } from '@angular/material/form-field';
 import {HttpClientModule} from '@angular/common/http'
-import {} from 'axios';
 import { HeaderComponent } from './header/header.component';
 import { NavComponent } from './nav/nav.component'
 import {MatMenuModule} from '@angular/material/menu';
@@ -23,6 +21,8 @@ import { MatCardModule } from '@angular/material/card';
 import { CardComponent } from './card/card.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
+import { PresentationComponent } from './presentation/presentation.component';
+import { MissionComponent } from './mission/mission.component';
 
 
 @NgModule({
@@ -37,6 +37,8 @@ import { ContactComponent } from './contact/contact.component';
     CardComponent,
     FooterComponent,
     ContactComponent,
+    PresentationComponent,
+    MissionComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,7 @@ import { ContactComponent } from './contact/contact.component';
     MatCardModule,
   ],
   providers: [],
-  exports: [ProductComponent],
+  exports: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

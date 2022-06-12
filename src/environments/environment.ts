@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  test: 'default',
+  img1: '../assets/picture/logowfb.png',
+  img2: '../assets/picture/geekfest.png',
 };
 
 /*
