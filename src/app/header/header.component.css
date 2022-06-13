@@ -1,12 +1,27 @@
-header {
+*{
   background-color: silver;
   width: 100%;
   color: grey;
   padding-bottom: 0.5px;
 }
-/* id */
-#logo {
+h1{
   margin: 20px;
-  width: 10rem;
-  grid-area: 1;
+}
+/* id */
+
+img{
+  width: 15em;
+  margin: 20px;
+}
+@media  all and (max-width: 1400px) {
+  img{
+  width: 10em;
+  margin: 20px;
+}
+}
+@media  all and (max-width: 1400px) {
+ img{
+  width: 5rem;
+  margin: 20px;
+}
 }

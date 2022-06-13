@@ -17,6 +17,8 @@ const routes: Routes = [
   { path: 'agenda', component:AgendaComponent  },
   { path: 'news', component: NewsComponent },
   { path: 'stream', component: StreamComponent },
+ 
+
   
   
 ];
