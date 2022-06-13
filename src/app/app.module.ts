@@ -23,6 +23,10 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { PresentationComponent } from './presentation/presentation.component';
 import { MissionComponent } from './mission/mission.component';
+import { EventComponent } from './event/event.component';
+import { AgendaComponent } from './agenda/agenda.component';
+import { NewsComponent } from './news/news.component';
+import { StreamComponent } from './stream/stream.component';
 
 
 @NgModule({
@@ -39,6 +43,10 @@ import { MissionComponent } from './mission/mission.component';
     ContactComponent,
     PresentationComponent,
     MissionComponent,
+    EventComponent,
+    AgendaComponent,
+    NewsComponent,
+    StreamComponent,
   ],
   imports: [
     BrowserModule,

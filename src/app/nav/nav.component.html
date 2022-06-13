@@ -7,14 +7,13 @@
 <button mat-button [matMenuTriggerFor]="belowMenu">Qui sommes nous ?</button>
 <mat-menu #belowMenu="matMenu" yPosition="below">
   <button mat-menu-item routerLink="/presentation">Présentation</button>
-  <button mat-menu-item  routerLink="/mission">Nos missions</button>
+  <button mat-menu-item routerLink="/mission">Nos missions</button>
 </mat-menu>
-<router-outlet></router-outlet>
-<button mat-button [matMenuTriggerFor]="beforeMenu">News</button>
+<button mat-button [matMenuTriggerFor]="beforeMenu" routerLink="/news">News</button>
 <mat-menu #beforeMenu="matMenu" xPosition="before">
-  <button mat-menu-item>Event</button>
-  <button mat-menu-item>agenda</button>
-  <button mat-menu-item>Stream</button>
+  <button mat-menu-item  routerLink="/event">Event</button>
+  <button mat-menu-item  routerLink="/agenda">agenda</button>
+  <button mat-menu-item  routerLink="/stream">Stream</button>
 </mat-menu>
 
 <button mat-button [matMenuTriggerFor]="afterMenu">Résaux sociaux</button>
@@ -23,4 +22,3 @@
   <button mat-menu-item>Twitter</button>
   <button mat-menu-item>Twitch</button>
 </mat-menu>
-<router-outlet></router-outlet>
