@@ -18,9 +18,6 @@ const routes: Routes = [
   { path: 'news', component: NewsComponent },
   { path: 'stream', component: StreamComponent },
  
-
-  
-  
 ];
 
 @NgModule({
