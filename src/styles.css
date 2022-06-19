@@ -1,4 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+     height: 100vh;
+    }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+  margin: 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  text-align: center;
+}
+
+h1 {
+  color: blueviolet;
+  font-family: "roboto", arial, sans-serif;
+  text-align: center;
+  font-size: 3.5em;
+  opacity: 0.6;
+  margin-top: 0px;
+  padding-top: 30px;
+}
+
+h2 {
+  color: blue;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 3em;
+  text-align: center;
+  opacity: 0.5;
+  width: auto;
+  margin: auto;
+}
+
+h3:before {
+  content: "«";
+  color: darkgreen;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  color: darkgreen;
+}
+
+h3:after {
+  content: " » ";
+  color: darkgreen;
+}
+
+h5 {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:focus {
+  color: blueviolet;
+}
