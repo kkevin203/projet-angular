@@ -1,7 +1,7 @@
 <button mat-button [matMenuTriggerFor]="aboveMenu" routerLink="">Acceuil</button>
 <mat-menu #aboveMenu="matMenu" yPosition="above">
-  <button mat-menu-item>pôle Esport</button>
-  <button mat-menu-item>pôle Evenementiel</button>
+  <button mat-menu-item routerLink="/pole-esport">pôle Esport</button>
+  <button mat-menu-item routerLink="/pole-event">pôle Evenementiel</button>
 </mat-menu>
 
 <button mat-button [matMenuTriggerFor]="belowMenu">Qui sommes nous ?</button>
@@ -18,7 +18,13 @@
 
 <button mat-button [matMenuTriggerFor]="afterMenu">Résaux sociaux</button>
 <mat-menu #afterMenu="matMenu" xPosition="after">
-  <button mat-menu-item >Facebook</button>
-  <button mat-menu-item >Twitter</button>
-  <button mat-menu-item >Twitch</button>
+  <button mat-menu-item >  
+    <a href="https://www.facebook.com/wolfblue.esport.7" target="_blank">facebook</a>
+</button>
+  <button mat-menu-item >
+     <a href="https://twitter.com/EsportWolfblue" target="_blank">twitter</a>
+  </button>
+  <button mat-menu-item >
+         <a href="https://www.twitch.tv/WolfblueEsport" target="_blank">twitch</a>
+  </button>
 </mat-menu>

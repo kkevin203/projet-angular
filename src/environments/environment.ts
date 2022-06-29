@@ -6,6 +6,9 @@ export const environment = {
   production: false,
   img1: '../assets/picture/logowfb.png',
   img2: '../assets/picture/geekfest.png',
+  imgagf1: '../assets/picture/20220406_121341.jpg',
+  imgagf2: '../assets/picture/20220402_221043.jpg',
+  imgagf3: '../assets/picture/20220402_221035.jpg',
 };
 
 /*

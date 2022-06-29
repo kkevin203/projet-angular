@@ -27,6 +27,9 @@ import { EventComponent } from './event/event.component';
 import { AgendaComponent } from './agenda/agenda.component';
 import { NewsComponent } from './news/news.component';
 import { StreamComponent } from './stream/stream.component';
+import { PoleEsportComponent } from './pole-esport/pole-esport.component';
+import { PoleEventComponent } from './pole-event/pole-event.component';
+import { ReseauxComponent } from './reseaux/reseaux.component';
 
 
 @NgModule({
@@ -47,6 +50,9 @@ import { StreamComponent } from './stream/stream.component';
     AgendaComponent,
     NewsComponent,
     StreamComponent,
+    PoleEsportComponent,
+    PoleEventComponent,
+    ReseauxComponent,
   ],
   imports: [
     BrowserModule,
