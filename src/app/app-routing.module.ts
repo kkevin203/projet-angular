@@ -12,16 +12,21 @@ import { StreamComponent } from './stream/stream.component';
 
 
 const routes: Routes = [
-  { path: '' , component: CardComponent},
+  { path: '', component: CardComponent },
   { path: 'presentation', component: PresentationComponent },
   { path: 'mission', component: MissionComponent },
-  { path: 'event' , component: EventComponent },
-  { path: 'agenda', component:AgendaComponent  },
+  { path: 'event', component: EventComponent },
+  { path: 'agenda', component: AgendaComponent },
   { path: 'news', component: NewsComponent },
   { path: 'stream', component: StreamComponent },
   { path: 'pole-event', component: PoleEventComponent },
   { path: 'pole-esport', component: PoleEsportComponent },
- 
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+
+  // sinon rediriger vers l'accueil
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
@@ -29,3 +34,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const appRoutingModule = RouterModule.forRoot(routes);

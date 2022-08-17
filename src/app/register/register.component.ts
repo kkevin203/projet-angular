@@ -1,21 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
-import { AlertService, AuthenticationService } from 'src/app/_services';
 
-@Component({ templateUrl: 'login.component.html' })
-export class LoginComponent implements OnInit {
-  loginForm!: FormGroup;
+import {
+  AlertService,
+  UserService,
+  AuthenticationService,
+} from 'src/app/_services';
+
+@Component({ templateUrl: 'register.component.html' })
+export class RegisterComponent implements OnInit {
+  registerForm!: FormGroup;
   loading = false;
   submitted = false;
-  returnUrl!: string;
 
   constructor(
     private formBuilder: FormBuilder,
-    private route: ActivatedRoute,
     private router: Router,
     private authenticationService: AuthenticationService,
+    private userService: UserService,
     private alertService: AlertService
   ) {
     // rediriger vers l'accueil si déjà connecté
@@ -25,18 +29,17 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.loginForm = this.formBuilder.group({
+    this.registerForm = this.formBuilder.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
       username: ['', Validators.required],
-      password: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(6)]],
     });
-
-    // obtenir l'URL de retour à partir des paramètres de route ou par défaut à '/'
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
   // getter pratique pour un accès facile aux champs de formulaire
   get f() {
-    return this.loginForm.controls;
+    return this.registerForm.controls;
   }
 
   onSubmit() {
@@ -46,19 +49,20 @@ export class LoginComponent implements OnInit {
     this.alertService.clear();
 
     // arrêtez-vous ici si le formulaire est invalide
-    if (this.loginForm.invalid) {
+    if (this.registerForm.invalid) {
       return;
     }
 
     this.loading = true;
-    this.authenticationService
-      .login(this.f['username'].value, this.f['password'].value)
+    this.userService
+      .register(this.registerForm.value)
       .pipe(first())
       .subscribe(
-        (data) => {
-          this.router.navigate([this.returnUrl]);
+        (data: any) => {
+          this.alertService.success('Registration successful', true);
+          this.router.navigate(['/login']);
         },
-        (error) => {
+        (error: any) => {
           this.alertService.error(error);
           this.loading = false;
         }

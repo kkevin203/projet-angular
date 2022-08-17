@@ -1,9 +1,14 @@
+
 <button mat-button [matMenuTriggerFor]="aboveMenu" routerLink="">Acceuil</button>
 <mat-menu #aboveMenu="matMenu" yPosition="above">
   <button mat-menu-item routerLink="/pole-esport">pôle Esport</button>
   <button mat-menu-item routerLink="/pole-event">pôle Evenementiel</button>
 </mat-menu>
-
+<button mat-button [matMenuTriggerFor]="aboveMenu" routerLink="">connexion</button>
+<mat-menu #aboveMenu="matMenu" yPosition="above">
+  <button mat-menu-item routerLink="/connecter">Se connecter</button>
+  <button mat-menu-item routerLink="/enregistrer">S'enregistrer</button>
+</mat-menu>
 <button mat-button [matMenuTriggerFor]="belowMenu">Qui sommes nous ?</button>
 <mat-menu #belowMenu="matMenu" yPosition="below">
   <button mat-menu-item routerLink="/presentation">Présentation</button>
@@ -27,4 +32,5 @@
   <button mat-menu-item >
          <a href="https://www.twitch.tv/WolfblueEsport" target="_blank">twitch</a>
   </button>
+
 </mat-menu>
